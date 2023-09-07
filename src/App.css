@@ -1,0 +1,404 @@
+@font-face {
+    font-family: pixel;
+    src: url(./assets/pixel.ttf);
+}
+
+:root {
+	--pixel-bg: rgb(201 245 249);
+	/* ↑ Inner background color */
+
+	--pixel-border: rgb(210, 251, 255, 0.5);
+	/* ↑ Inner border color */
+
+	--pixel-border-2: rgb(190, 250, 255, 0.5);
+	/* ↑ Middle border color */
+
+	--pixel-border-3: rgb(135, 235, 244);
+	/* ↑ Outer border color */
+
+	--pixel: .2rem;
+	/* ↑ Pixel size */
+	--t: rgba(255, 0, 0, 0);
+  --w: rgba(255, 255, 255, 0.98);
+  --shine-angle: 15deg;
+}
+
+.ReactModal__Content, #read, .App {
+	background: var(--pixel-bg);
+
+	box-shadow:
+		/* Inner Background Color */
+		0 calc(var(--pixel) * -3) 0 calc(var(--pixel) * -1) var(--pixel-bg),
+		0 calc(var(--pixel) * 3) 0 calc(var(--pixel) * -1) var(--pixel-bg),
+		0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -2) var(--pixel-bg),
+		0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -2) var(--pixel-bg),
+		0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -4) var(--pixel-bg),
+		0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -4) var(--pixel-bg),
+		0 calc(var(--pixel) * -12) 0 calc(var(--pixel) * -6) var(--pixel-bg),
+		0 calc(var(--pixel) * 12) 0 calc(var(--pixel) * -6) var(--pixel-bg),
+
+		/* Pixel Border Layer 1 */
+		calc(var(--pixel) * -1) 0 0 0 var(--pixel-border),
+		var(--pixel) 0 0 0 var(--pixel-border),
+		0 calc(var(--pixel) * -2) 0 var(--pixel-border),
+		0 calc(var(--pixel) * 2) 0 0 var(--pixel-border),
+		0 calc(var(--pixel) * -5) 0 calc(var(--pixel) * -1) var(--pixel-border),
+		0 calc(var(--pixel) * 5) 0 calc(var(--pixel) * -1) var(--pixel-border),
+		0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -2) var(--pixel-border),
+		0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -2) var(--pixel-border),
+		0 calc(var(--pixel) * -10) 0 calc(var(--pixel) * -4) var(--pixel-border),
+		0 calc(var(--pixel) * 10) 0 calc(var(--pixel) * -4) var(--pixel-border),
+		0 calc(var(--pixel) * -13) 0 calc(var(--pixel) * -6) var(--pixel-border),
+		0 calc(var(--pixel) * 13) 0 calc(var(--pixel) * -6) var(--pixel-border),
+
+		/* Pixel Border Layer 2 */
+		calc(var(--pixel) * -2) 0 0 0 var(--pixel-border-2),
+		calc(var(--pixel) * 2) 0 0 0 var(--pixel-border-2),
+		0 calc(var(--pixel) * -1) 0 var(--pixel) var(--pixel-border-2),
+		0 var(--pixel) 0 var(--pixel) var(--pixel-border-2),
+		0 calc(var(--pixel) * -4) 0 0 var(--pixel-border-2),
+		0 calc(var(--pixel) * 4) 0 0 var(--pixel-border-2),
+		0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -1) var(--pixel-border-2),
+		0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -1) var(--pixel-border-2),
+		0 calc(var(--pixel) * -8) 0 calc(var(--pixel) * -2) var(--pixel-border-2),
+		0 calc(var(--pixel) * 8) 0 calc(var(--pixel) * -2) var(--pixel-border-2),
+		0 calc(var(--pixel) * -11) 0 calc(var(--pixel) * -4) var(--pixel-border-2),
+		0 calc(var(--pixel) * 11) 0 calc(var(--pixel) * -4) var(--pixel-border-2),
+		0 calc(var(--pixel) * -14) 0 calc(var(--pixel) * -6) var(--pixel-border-2),
+		0 calc(var(--pixel) * 14) 0 calc(var(--pixel) * -6) var(--pixel-border-2),
+
+		/* Border Layer 3: --pixel-border-3 */
+		calc(var(--pixel) * -3) 0 0 0 var(--pixel-border-3),
+		calc(var(--pixel) * 3) 0 0 0 var(--pixel-border-3),
+		0 0 0 calc(var(--pixel) * 2) var(--pixel-border-3),
+		0 calc(var(--pixel) * -3) 0 var(--pixel) var(--pixel-border-3),
+		0 calc(var(--pixel) * 3) 0 var(--pixel) var(--pixel-border-3),
+		0 calc(var(--pixel) * -5) 0 0 var(--pixel-border-3),
+		0 calc(var(--pixel) * 5) 0 0 var(--pixel-border-3),
+		0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -1) var(--pixel-border-3),
+		0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -1) var(--pixel-border-3),
+		0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -2) var(--pixel-border-3),
+		0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -2) var(--pixel-border-3),
+		0 calc(var(--pixel) * -12) 0 calc(var(--pixel) * -4) var(--pixel-border-3),
+		0 calc(var(--pixel) * 12) 0 calc(var(--pixel) * -4) var(--pixel-border-3),
+		0 calc(var(--pixel) * -15) 0 calc(var(--pixel) * -6) var(--pixel-border-3),
+		0 calc(var(--pixel) * 15) 0 calc(var(--pixel) * -6) var(--pixel-border-3),
+		20px 30px 40px rgba(0, 0, 0, 0.5);
+	width: 50vw;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: pixel;
+	overflow: auto;
+
+
+}
+#read{
+	width:auto;
+	margin-top:40px;
+}
+
+button{
+	border: transparent;
+}
+	
+.App1 ::-webkit-scrollbar-thumb{
+	display: none;
+	visibility: hidden;
+}
+::-webkit-scrollbar {
+	width: 50px;
+  }
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+	
+  }
+  ::-webkit-scrollbar-thumb {
+	background: transparent;
+	/* border-radius: 10px; */
+	background-image: url('./assets/spinning\ star.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 40px 40px;
+
+  }
+
+.ReactModal__Overlay--after-open {
+	background-color: #89e4f8;
+}
+
+.ReactModal__Body--open {
+	overflow: auto;
+}
+
+div.open {
+	position: absolute;
+	inset: 40px;
+	background: rgb(201 245 249);
+	outline: none;
+}
+
+.App{
+	position: relative;
+	text-align: center;
+	font-family: pixel;
+	background:url('./assets/room2.png') center/100% 100% no-repeat, url('./assets/scene1.gif') center/48% 65% no-repeat;	
+	width:75vw;
+	height: 36vw;
+	min-width: 200px;
+	margin-top:2vw;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	
+}
+.App1 {
+
+	display: flex;
+	flex-direction:column;
+	
+}
+body, button{
+	cursor: url('assets/minimal-lgloo-pack.png'), auto;
+	background: url("https://i.pinimg.com/originals/80/42/d5/8042d5b86ee7015157cab06b14c80e42.gif") 50% 50% repeat;
+	
+}
+.login{
+text-align: center;
+font-family: pixel;
+}
+
+
+.font-face-gm {
+	font-family: "pixel";
+}
+
+
+#mangaSearch {
+	height: 170px;
+}
+
+.mangaImg {
+	background-color: aliceblue;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 1vw;
+	margin: 5px;
+	max-width: 20vw;
+	height: auto;
+}
+
+#offBookcase {
+	display: flex;
+	align-content: center;
+	text-align: center;
+	justify-content: space-around;
+}
+
+#topOffBookcase {
+	color: #21d1f8;
+	text-align: center;
+	padding: 1px;
+	justify-content: space-between;
+	background-color: #89e4f8;
+	border-bottom: 2px solid #21d1f8;
+	border-top: 2px solid #21d1f8;
+}
+
+.bold {
+	font-weight: bolder;
+}
+
+.close {
+	float: right;
+	background-image: url('./assets/close.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: transparent;
+	height: 20px;
+	width: 20px;
+}
+#openSearch{
+	background-image: url('./assets/searchManga.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: transparent;
+	height: 70px;
+	width: 60px;
+	position: absolute;
+	transform:translate(22vw,9vh)
+}
+
+ul{
+	list-style-position: inside;
+}
+tr {
+	text-align: center;
+	width: auto;
+}
+
+ input{
+	font-family: pixel;
+	text-align: center;
+	border:solid 2px #21d1f8;
+}
+
+.bookcase{
+	width:auto;
+}
+ .bookcase >img {
+	/* background-image: url('./assets/bookcase.png');
+	background-position:center;
+	background-size: contain;
+	background-repeat: no-repeat; */
+	height: auto;
+	width:45%;
+	position: absolute; 	
+	transform: translate(13vw, 10vh);  
+ }
+#mangalist{
+	height:180px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	width:fit-content;
+	background-color: transparent;
+	left:-2vw;
+	top:15vh;
+	position: absolute;
+	font-size: small;
+}
+
+
+#mangalist::-webkit-scrollbar-thumb {
+	display: none;
+	visibility: hidden;
+  }
+.poster{
+	height: auto;
+	width:120px;
+	padding: 4px;
+	
+}
+
+#settings{
+	float:right;
+	position: relative;
+	width:50px;
+	height:50px;
+	margin-right:8px;
+}
+
+
+.tooltip .tooltiptext {
+	width: 120px;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  }
+  .settingsbtn {
+	background-color: transparent;	
+  }
+  
+  .settingsbtn:hover, .settingsbtn:focus {
+	animation: 1s spin linear;
+  }
+  
+  .dropdownS {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .settings-content {
+	display: none;
+	position: absolute;
+	background-color: transparent;
+	width: 100px;
+	overflow: auto;
+	text-align: center;
+	z-index: 10;
+  }
+  
+  .settings-content img {
+	width:60%;
+	padding: 12px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  
+  .show {display: block;}
+
+  @keyframes spin{
+	0%{
+		rotate:0deg;
+	}
+	100%{
+		rotate:360deg;
+	}
+  }
+
+  * {
+	box-sizing: border-box;
+  }
+  
+  .sticker {
+	--c1: #ef548f;
+	--c2: #ef8b6d;
+	--c3: #cfef6b;
+	--c4: #3bf0c1;
+	--c5: #bb4af0;
+	--shine-angle: 15deg;
+	display: inline-grid;
+	grid-template-areas: "text";
+	place-items: center;
+	font-family: "pixel", sans-serif;
+	font-weight: 900;
+	font-size: clamp(1rem, 6vw, 2rem);
+	text-transform: uppercase;
+	color: var(--c5);
+  }
+  
+  .sticker-lg {
+	font-size: clamp(2rem, 10vw, 3rem);
+  }
+  
+  .sticker span {
+	background: linear-gradient(
+	  var(--shine-angle),
+	  rgba(255, 0, 0, 0),
+	  rgba(255, 0, 0, 0) 35%,
+	  rgba(255, 255, 255, 0.98) 49.95%,
+	  rgba(255, 255, 255, 0.98) 50.15%,
+	  rgba(255, 0, 0, 0) 65%,
+	  rgba(255, 0, 0, 0)
+	),
+	linear-gradient(to bottom, var(--c1), var(--c2), var(--c3), var(--c4), var(--c5));
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 0.01em rgba(0, 0, 0, 0.6);
+  }
+  
+  .sticker > *,
+  .sticker::before,
+  .sticker::after {
+	grid-area: text;
+  }
+  
+  .sticker::before,
+  .sticker::after {
+	content: attr(data-text);
+	color: #fff;
+  }
+  
+  .sticker::before {
+	-webkit-text-stroke: 0.2em white;
+	background: no-repeat linear-gradient(white, white) 15% 50% / 85% 60%;
+  }
+  
+  .sticker::after {
+	text-shadow: 0.02em 0.08em 0.05em rgba(0, 0, 0, 0.75), -0.07em -0.05em 0.05em rgba(0, 0, 0, 0.75);
+	z-index: -2;
+  }
+  
