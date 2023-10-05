@@ -1,17 +1,17 @@
-TITILE:COZYBOOKAPP
+TITLE:COZYBOOKAPP
 
 
 This app was made as the last project for my Fullstack Software Engineering course. The idea is a app that you can use to read manga/webtoon/manhuas etc.. while listen to music and being in a cozy enviroment. 
 
 I used both MangaDex API : https://api.mangadex.org/docs/
 and Spotify API :https://developer.spotify.com/documentation/ in this app.
-The was developed in VisualStudio using MERN stack.
+Was developed in VisualStudio using MERN stack.
 
-This project is not to be published and used as a commericial application but feel free to download and use it personally. Hopefully im able to make more updates and allow users to share rooms and host book clubs in app. But thats for the future.
+This project is not to be published and used as a commericial application due the use of MangaDex API but feel free to fork and use it personally. Hopefully im able to make more updates and allow users to share rooms and host book clubs in app. But thats for the future.
 
 Youtube: https://youtu.be/6wzHC1SsW8c (not the best explaination but its fine for now)
 
-
+**To run this application i used a spilt gitbash terminal. One for backend and one for frontend**  
 
 # Getting Started with Create React App
 
