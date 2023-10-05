@@ -1,4 +1,4 @@
-TITLE:COZYBOOKAPP v1.0
+TITLE:**COZYBOOKAPP** v1.0
 
 
 This app was made as the last project for my Fullstack Software Engineering course. The idea is a app that you can use to read manga/webtoon/manhuas etc.. while listening to music and being in a cozy enviroment. 
