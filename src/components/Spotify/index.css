@@ -44,7 +44,7 @@
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
     top:0vh;
-   left:4.5vw;
+   left:4vw;
     display: block;
   }
   

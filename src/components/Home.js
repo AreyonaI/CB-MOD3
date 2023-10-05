@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import MangaList from './Bookcase/mangaList';
 import '../App.css';
 import { v4 as uuidv4 } from 'uuid';//uuid provides a unique ids to components
-import SearchBooks from './Bookcase/pages/searchBooks.js';
+import SearchBooks from './Bookcase/parts/searchBooks.js';
 import Settings from './settings.js'
 import sound from "../assets/Mouse-Click-00-c-FesliyanStudios.com.mp3";
 import bookcase from "../assets/bookcase.png"
@@ -15,7 +15,9 @@ import Spotify from './Spotify/spotify';
 // import Scene1 from './images/scene1.gif'
 
 Modal.setAppElement("#root");
-
+window.onload = function () {
+  alert("This app is best suited for a maximized browser");
+};
 const Home = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [selectedTrack, setSelectedTrack] = useState("");
